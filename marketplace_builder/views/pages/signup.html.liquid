@@ -1,0 +1,19 @@
+---
+slug: signup
+metadata:
+  title: "This it the title"
+  description: "A description"
+  tags: ["signup", "choose", "landing"]
+---
+
+<h1>{{ page.metadata.title }}</h1>
+
+<section>{{ page.metadata.description }}</section>
+
+<ul>
+  {% for tag in page.metadata.tags %}
+    <li>{{ tag }}</li>
+  {% endfor %}
+</ul>
+
+<strong>{{ page.metadata.tags | join: "," }}</strong>
